@@ -1,0 +1,136 @@
+
+:root {
+  --bg: #0f1115;
+  --card-bg: #171a21;
+  --border: #262b35;
+  --text-principal: #e8eaed;
+  --text-secundario: #9aa3af;
+  --acento: #5eead4;
+  --acento-escuro: #14b8a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(94, 234, 212, 0.06), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(94, 234, 212, 0.04), transparent 40%);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--text-principal);
+}
+
+.perfil {
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px 28px 32px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--acento), var(--acento-escuro));
+  color: #0f1115;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+
+img.avatar {
+  object-fit: cover;
+  background: none;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-principal);
+}
+
+.area {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--acento);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.descricao {
+  margin: 0 0 24px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-secundario);
+}
+
+.habilidades {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.habilidades li {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--text-principal);
+  background-color: rgba(94, 234, 212, 0.06);
+}
+
+.botao {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 10px;
+  background-color: var(--acento);
+  color: #0f1115;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+  background-color: var(--acento-escuro);
+  transform: translateY(-2px);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+}
+
+@media (max-width: 400px) {
+  .perfil {
+    padding: 32px 20px 26px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+}
